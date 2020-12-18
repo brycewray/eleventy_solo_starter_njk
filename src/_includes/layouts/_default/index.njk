@@ -9,14 +9,14 @@ layout: layouts/_default/base.njk
     {% lazypicture featured_image, featured_image_alt, "index" %}
   </div>
   {% if featured_image_caption %}
-  <p class="text-center text-xs tracking-normal mt-1">{{ featured_image_caption | safe }}</p>
+  <p class="font-sans text-center text-xs tracking-normal mt-1">{{ featured_image_caption | safe }}</p>
   {% endif %}
 
 
   <div class="container px-8 lg:grid lg:grid-cols-5 lg:gap-16 lg:w-5/6 mr-auto ml-auto">
     <div class="col-span-3 home-colOne">
       <h1>Welcome.</h1>
-      <p class="text-xs tracking-normal mt-1 mb-0 dateInfo" style="line-height: 1.5 !important;">
+      <p class="font-sans text-xs tracking-normal mt-1 mb-0 dateInfo" style="line-height: 1.5 !important;">
         Published: <time style="display: inline;" datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time>
         {% if lastmod %}
         <br />Last modified: <time style="display: inline;" datetime="{{ page.date | htmlDateString }}">{{ lastmod | htmlDateString }}</time>
@@ -30,20 +30,20 @@ layout: layouts/_default/base.njk
         {% if loop.index0 < 7 %}	
         <div>
           <h2 class="h4 not-italic tracking-tight"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-          <p class="font-bold text-base mt-1 mb-0 leading-5">{{ post.data.subtitle }}</p>
-          <p class="text-xs tracking-normal mt-1 mb-0 dateInfo">
+          <p class="font-sans font-bold text-base mt-1 mb-0 leading-5">{{ post.data.subtitle }}</p>
+          <p class="font-sans text-xs tracking-normal mt-1 mb-0 dateInfo">
             Published: <time style="display: inline;" datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time>
             {% if post.data.lastmod %}
             <br />Last modified: <time style="display: inline;" datetime="{{ post.date | htmlDateString }}">{{ post.data.lastmod | htmlDateString }}</time>
             {% endif %}
           </p>
-          <p class="text-sm mt-1 mb-4">
+          <p class="font-sans text-sm mt-1 mb-4">
             {{ post.data.description }}
           </p>
         </div>
         {% endif %}
       {% endfor %}
-      <p><a href="/posts/"><strong>All {{ collections.post.length }} posts</strong></a> <span class="text-sm"><em>(listed five per page)</em></span></p>
+      <p class="font-sans"><a href="/posts/"><strong>All {{ collections.post.length }} posts</strong></a> <span class="text-sm"><em>(listed five per page)</em></span></p>
       <!-- Twitter timeline used to go here -->
     </div>
   </div>
