@@ -1,0 +1,67 @@
+---
+title: BryceWray.com
+layout: layouts/_default/base.njk
+---
+
+<main>
+
+  <div class="w-full height-hero">
+    <div class="h-full" style="background-image: url(https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_1,w_20/{{ featured_image }}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+      <img
+        class='object-cover object-center h-full w-full containedImage lazy' 
+        data-src='https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_600,x_0,z_1/{{ featured_image }}' 
+        data-srcset='{% if featured_image_width >= 300 %}https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_300,x_0,z_1/{{ featured_image }} 300w{% endif %}{% if featured_image_width >= 450 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_450,x_0,z_1/{{ featured_image }} 450w{% endif %}{% if featured_image_width >= 600 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_600,x_0,z_1/{{ featured_image }} 600w{% endif %}{% if featured_image_width >= 750 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_750,x_0,z_1/{{ featured_image }} 750w{% endif %}{% if featured_image_width >= 900 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_900,x_0,z_1/{{ featured_image }} 900w{% endif %}{% if featured_image_width >= 1050 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1050,x_0,z_1/{{ featured_image }} 1050w{% endif %}{% if featured_image_width >= 1200 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1200,x_0,z_1/{{ featured_image }} 1200w{% endif %}{% if featured_image_width >= 1350 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1350,x_0,z_1/{{ featured_image }} 1350w{% endif %}{% if featured_image_width >= 1500 %}, https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1500,x_0,z_1/{{ featured_image }} 1500w{% endif %}' 
+        alt='{{ featured_image_alt }}' 
+        width='{{ featured_image_width }}' 
+        height='{{ featured_image_height }}' 
+        sizes="100vw"
+      />
+      <noscript>
+        <img
+          class="imgCover hero" 
+          src="https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_300,x_0,z_1/{{ featured_image }}" 
+          alt="{{ featured_image_alt }}" 
+        />
+      </noscript>
+    </div>
+  </div>
+  {% if featured_image_caption %}
+  <p class="text-center text-xs tracking-normal mt-1">{{ featured_image_caption | safe }}</p>
+  {% endif %}
+
+
+  <div class="container px-8 lg:grid lg:grid-cols-5 lg:gap-16 lg:w-5/6 mr-auto ml-auto">
+    <div class="col-span-3 home-colOne">
+      <h1>Welcome.</h1>
+      <p class="text-xs tracking-normal mt-1 mb-0 dateInfo" style="line-height: 1.5 !important;">
+        Published: <time style="display: inline;" datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time>
+        {% if lastmod %}
+        <br />Last modified: <time style="display: inline;" datetime="{{ page.date | htmlDateString }}">{{ lastmod | htmlDateString }}</time>
+        {% endif %}
+      </p>
+      {{ content | safe }}
+    </div>
+    <div class="col-span-2 border-black border-t lg:border-0 pt-4 lg:pt-0">
+      <h2 class="h1 mb-4">Recent <a href="/posts/">posts</a></h2>
+      {% for post in collections.post | reverse %}
+        {% if loop.index0 < 7 %}	
+        <div>
+          <h2 class="h4 not-italic tracking-tight"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <p class="font-bold text-base mt-1 mb-0 leading-5">{{ post.data.subtitle }}</p>
+          <p class="text-xs tracking-normal mt-1 mb-0 dateInfo">
+            Published: <time style="display: inline;" datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time>
+            {% if post.data.lastmod %}
+            <br />Last modified: <time style="display: inline;" datetime="{{ post.date | htmlDateString }}">{{ post.data.lastmod | htmlDateString }}</time>
+            {% endif %}
+          </p>
+          <p class="text-sm mt-1 mb-4">
+            {{ post.data.description }}
+          </p>
+        </div>
+        {% endif %}
+      {% endfor %}
+      <p><a href="/posts/"><strong>All {{ collections.post.length }} posts</strong></a> <span class="text-sm"><em>(listed five per page)</em></span></p>
+      <!-- Twitter timeline used to go here -->
+    </div>
+  </div>
+</main>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'layouts/partials/head.njk' %}
+  <body>
+    {% include 'layouts/partials/header.njk' %}
+    {{ content | safe }}
+    {% include 'layouts/partials/footer.njk' %}
+    <script src="/assets/js/lazyload_17-3-0.min.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+        threshold: 150,
+      })
+    </script>
+  </body>
+</html>
