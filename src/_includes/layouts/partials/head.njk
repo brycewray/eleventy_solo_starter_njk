@@ -1,6 +1,3 @@
-{% set cloudiBase = "https://res.cloudinary.com/brycewray-com/image/upload/" %}
-{% set xFmPart1 = "c_fill,w_1024,h_512," %}
-{% set xFmPart2 = "q_auto,f_auto,x_0,z_1/" %}
 {% set fallbackImg = "typewriter-monochrome_2242164_6260x4374.jpg" %}
 {% set eleventyVer = "0.11.1" %}<!-- as opposed to manual hit of JSON file -->
 
@@ -20,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:image" content="{{ cloudiBase }}{{ xFmPart1 }}{{ xFmPart2 }}{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{% endif %}" />
+    <meta property="og:image" content="/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{% endif %}" />
 
     {% if title == "Home page" %}
       <meta name="description" content="{{ siteparams.siteDescription }}" />
@@ -38,7 +35,7 @@
     <meta name="twitter:site" content="@BryceWrayTX">
     <meta name="twitter:creator" content="@BryceWrayTX">
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="{{ cloudiBase }}{{ xFmPart1 }}{{ xFmPart2 }}{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{% endif %}" />
+    <meta name="twitter:image" content="/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{% endif %}" />
     {% if title != "Home page" %}
       <meta name="twitter:description" content="{{ description }}" />
       <meta name="twitter:title" content="{{ title }}" />
@@ -50,7 +47,6 @@
     <!-- **** BEGINNING, favicons **** -->
 
     <!-- generics -->
-    <link rel="icon" type="image/svg+xml" href="/assets/svg/svgNavIcon_reduced.svg" />
     <link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32">
 
@@ -73,10 +69,8 @@
 
     <!-- **** CONCLUSION, favicons **** -->
 
-    <link rel="preconnect" href="https://res.cloudinary.com" />
-
-    <link rel="preload" href="/assets/fonts/Inter-3-15_subset_2020-08-20.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/css/{{ csshash['index.css'] }} " type="text/css" />
+    <link rel="preload" href="/css/{{ csshash['index.css'] }}" as="style" crossorigin />
+    <link rel="stylesheet" href="/css/{{ csshash['index.css'] }}" type="text/css" />
     <style>@-moz-document url-prefix() {.lazy:-moz-loading {visibility:hidden;}}.ieOnly {display: none;}@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {.ieOnly {display: block;}}</style>
     <noscript><style>.lazyload {display: none !important;}</style></noscript>
     
