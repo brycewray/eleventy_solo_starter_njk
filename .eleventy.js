@@ -1,19 +1,20 @@
 const { DateTime } = require('luxon')
 const htmlmin = require('html-minifier')
-const ofotigrid = require('./src/_includes/ofotigrid.js')
-const sanitizeHTML = require('sanitize-html')
+// const ofotigrid = require('./src/_includes/ofotigrid.js')
+// const sanitizeHTML = require('sanitize-html')
 const ErrorOverlay = require('eleventy-plugin-error-overlay')
 
 module.exports = function (eleventyConfig) {
 
   // theming -- based on Reuben Lillie's code (https://gitlab.com/reubenlillie/reubenlillie.com/)
-  ofotigrid(eleventyConfig)
+  // ofotigrid(eleventyConfig)
 
   eleventyConfig.setQuietMode(true)
 
   eleventyConfig.addPassthroughCopy('robots.txt')
   eleventyConfig.addPassthroughCopy('favicon.ico')
   eleventyConfig.addPassthroughCopy('./src/assets/js')
+  eleventyConfig.addPassthroughCopy('./src/assets/svg')
   eleventyConfig.addPassthroughCopy('./src/images/icons')
 
   eleventyConfig.addFilter("readableDate", dateObj => {
