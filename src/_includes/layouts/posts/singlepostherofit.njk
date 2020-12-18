@@ -5,35 +5,8 @@ layout: layouts/_default/base.njk
 
 <main>
   <div class="background-hero-image-div">
-    <div class="h-full" style="background-image: url(https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_1,w_20/{{ featured_image }}); background-position: center; background-repeat: no-repeat; background-size: cover;">
-      <img 
-        class='imgCover hero lazy' 
-        data-src='https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_600,x_0,z_1/{{ featured_image }}' 
-        data-srcset='
-        {% if featured_image_width >= 300 %}https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_300,x_0,z_1/{{ featured_image }} 300w{% endif %}{% if featured_image_width >= 450 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_450,x_0,z_1/{{ featured_image }} 450w{% endif %}{% if featured_image_width >= 600 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_600,x_0,z_1/{{ featured_image }} 600w{% endif %}{% if featured_image_width >= 750 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_750,x_0,z_1/{{ featured_image }} 750w{% endif %}{% if featured_image_width >= 900 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_900,x_0,z_1/{{ featured_image }} 900w{% endif %}{% if featured_image_width >= 1050 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1050,x_0,z_1/{{ featured_image }} 1050w{% endif %}{% if featured_image_width >= 1200 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1200,x_0,z_1/{{ featured_image }} 1200w{% endif %}{% if featured_image_width >= 1350 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1350,x_0,z_1/{{ featured_image }} 1350w{% endif %}{% if featured_image_width >= 1500 %}, 
-        https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_1500,x_0,z_1/{{ featured_image }} 1500w{% endif %}
-        ' 
-        alt={{ featured_image_alt }} 
-        width={{ featured_image_width }} 
-        height={{ featured_image_height }} 
-        sizes="100vw"
-      />
-      <noscript>
-        <img
-          class="imgCover" 
-          src="https://res.cloudinary.com/brycewray-com/image/upload/f_auto,q_auto:eco,w_300,x_0,z_1/{{ featured_image }}" 
-          alt="{{ featured_image_alt }}" 
-        />
-      </noscript>
-    </div>
     <div class="background-hero-title-block-fit">
+      {% lazypicture page.featured_image, page.featured_image_alt, page.featured_image_width, page.featured_image_height, posts %}
       <div class="background-hero-title-text">
         <h1 class="text-center text-4xl md:text-left md:text-5xl lg:text-7xl xb:text-8xl tracking-tight leading-tight mb-6 px-4 md:px-0 text-white">{{ title }}</h1>
         <h2 class="text-center text-2xl md:text-left md:text-3xl lg:text-5xl xb:text-6xl leading-tight tracking-tight px-6 md:px-0 text-white">
