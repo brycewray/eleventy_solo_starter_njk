@@ -6,7 +6,7 @@ layout: layouts/_default/base.njk
 <main>
 
   <div class="w-full height-hero">
-    {% lazypicture featured_image, featured_image_alt, featured_image_width, featured_image_height, "index" %}
+    {% lazypicture featured_image, featured_image_alt, "index" %}
   </div>
   {% if featured_image_caption %}
   <p class="text-center text-xs tracking-normal mt-1">{{ featured_image_caption | safe }}</p>
