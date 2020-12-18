@@ -1,7 +1,7 @@
 ---
-layout: layouts/posts/singlepostherofit.11ty.js
+layout: layouts/posts/singlepostherofit.njk
 title: "The About Me page"
-# Change the title setting for this in /src/_includes/layouts/posts/singlepostherofit.11ty.js
+# Change the title setting for this in /src/_includes/layouts/posts/singlepostherofit.njk
 # to keep the "Other posts" box from appearing at the bottom of this page, since it uses 
 # the same layout as posts.
 description: "Your UNIQUE description here."
@@ -14,7 +14,7 @@ featured_image_alt: Stylistic image of question mark superimposed over computer 
 featured_image_caption: "Image: Dalamo; Pixabay"
 ---
 
-**Important**: Be sure to change the title setting for this page in the *singlepostherofit.11ty.js* template, to keep the "Other posts" box from appearing at the bottom of this page---since it uses the same layout as the posts.{.yellowBox}
+**Important**: Be sure to change the title setting for this page in the *singlepostherofit.njk* template, to keep the "Other posts" box from appearing at the bottom of this page---since it uses the same layout as the posts.{.yellowBox}
 
 This is for a few words about you.
 

@@ -1,5 +1,5 @@
 ---
-layout: layouts/posts/singlepostherofit.11ty.js
+layout: layouts/posts/singlepostherofit.njk
 tags: post
 title: "Post 8 with its UNIQUE title" # Quotation marks allow colons, semicolons, etc.
 subtitle: "The UNIQUE Post 8 subtitle" # Quotation marks allow colons, semicolons, etc.
