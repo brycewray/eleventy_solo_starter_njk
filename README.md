@@ -1,10 +1,12 @@
-# Eleventy starter set
+# Eleventy starter set (Nunjucks-based)
 
 This is a starter set for the [Eleventy](https://11ty.dev) [static site generator (SSG)](https://staticgen.com); it’s based on my website at [brycewray.com](https://brycewray.com).
 
-See the [online demo](https://eleventy-solo-starter.netlify.app/).
+See the [online demo](https://eleventy-solo-starter-njk.netlify.app/).
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/830a2888-915d-4018-a21a-4d213dad79da/deploy-status)](https://app.netlify.com/sites/eleventy-solo-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b4d44291-3e6b-44ad-aeb9-0eee90e39762/deploy-status)](https://app.netlify.com/sites/eleventy-solo-starter-njk/deploys)
+
+*This starter set uses Nunjucks templating. For a version that uses JavaScript templating (.11ty.js), see the [eleventy_solo_starter repo](https://github.com/brycewray/eleventy_solo_starter).*
 
 ## How to use
 
