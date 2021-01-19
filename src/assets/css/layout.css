@@ -11,6 +11,10 @@ body {
   font-feature-settings: "liga" 1;
 }
 
+b, strong {
+  font-weight: 625;
+}
+
 p, li {
   /* for handling Markdown-created <p> and <li> */
   @apply mb-3 text-lg;
@@ -299,8 +303,7 @@ table.noborders thead tr {
 }
   
 table.noborders thead td {
-  @apply text-white;
-  font-weight: 625;
+  @apply text-white font-bold;
 }
   
 table.noborders td.td70 {

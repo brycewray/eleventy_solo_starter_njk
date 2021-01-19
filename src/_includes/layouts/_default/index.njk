@@ -30,7 +30,7 @@ layout: layouts/_default/base.njk
         {% if loop.index0 < 7 %}	
         <div>
           <h2 class="h4 not-italic tracking-tight"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-          <p class="font-sans text-base mt-1 mb-0 leading-5" style="font-weight: 625;">{{ post.data.subtitle }}</p>
+          <p class="font-sans font-bold text-base mt-1 mb-0 leading-5">{{ post.data.subtitle }}</p>
           <p class="font-sans text-xs tracking-normal mt-1 mb-0 dateInfo">
             Published: <time style="display: inline;" datetime="{{ post.date | htmlDateString }}">{{ post.date | htmlDateString }}</time>
             {% if post.data.lastmod %}
