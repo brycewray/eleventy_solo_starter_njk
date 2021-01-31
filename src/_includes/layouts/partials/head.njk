@@ -27,8 +27,8 @@
     {% else %}
       <meta name="description" content="{{ description }}" />
       <meta property="og:description" content="{{ description }}" />
-      <meta property="og:url" content="https://brycewray.com{{ page.url }}" />
-      <link rel="canonical" href="https://brycewray.com{{ page.url }}" />
+      <meta property="og:url" content="{{ siteparams.siteURLforOG }}{{ page.url }}" />
+      <link rel="canonical" href="{{ siteparams.siteURLforOG }}{{ page.url }}" />
     {% endif %}
 
     <!-- Twitter meta -->
