@@ -23,12 +23,10 @@
       <meta name="description" content="{{ siteparams.siteDescription }}" />
       <meta property="og:description" content="{{ siteparams.siteDescription }}" />
       <meta property="og:url" content = "{{ siteparams.siteURLforOG }}/" />
-      <link rel="canonical" href="{{ siteparams.siteURLforOG }}/" />
     {% else %}
       <meta name="description" content="{{ description }}" />
       <meta property="og:description" content="{{ description }}" />
       <meta property="og:url" content="{{ siteparams.siteURLforOG }}{{ page.url }}" />
-      <link rel="canonical" href="{{ siteparams.siteURLforOG }}{{ page.url }}" />
     {% endif %}
 
     <!-- Twitter meta -->
