@@ -1,0 +1,37 @@
+---
+title: singlepost.njk
+layout: layouts/_default/base.njk
+---
+
+<main>
+
+  {% include 'layouts/partials/billboard.njk' %}
+
+  <div class="mt-8 lg:mt-12 2xl:mt-16 border-blue-700 dark:border-white mx-auto my-auto w-1/5 border-solid border-b-4"></div>
+
+  <div class="sm:w-5/6 md:w-4/5 xl:w-1/2 mt-10 mr-auto ml-auto px-6 lg:px-16">
+    <article class="article">
+      {{ content | safe }}
+    </article>
+  </div>
+
+  {% if title != "The About Me page" %}
+
+  <div class="font-sans w-full px-8 md:px-0 bg-blue-700 align-middle mt-10 mb-10">
+    <h3 class="text-center text-3xl tracking-normal mb-2 pt-2"><a href="/posts" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
+  {% if nextPost.url %}
+    <p class="text-center my-2 text-xl text-white leading-tight tracking-tight">
+      <strong>Next</strong>: 
+      <a class="border-transparent text-blue-100 hover:text-white hover:border-blue-100" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+    </p>
+  {% endif %}
+  {% if prevPost.url %}
+    <p class="text-center pb-4 my-2 text-xl text-white leading-tight tracking-tight">
+      <strong>Previous</strong>: 
+      <a class="border-transparent text-blue-100 hover:text-white hover:border-blue-100" href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+    </p>
+  {% else %}
+    <p class="text-xs my-0 py-0 leading-tight">&nbsp;</p>
+  {% endif %}
+  </div>
+  {% endif %}

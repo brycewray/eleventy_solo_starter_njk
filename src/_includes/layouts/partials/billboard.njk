@@ -1,0 +1,19 @@
+<div class="text-center pt-12 lg:pt-20">
+  <div>
+    <h1 class="text-3xl lg:text-6xl 2xl:text-8xl">{{ title }}</h1>
+    {% if subtitle %}
+    <h2 class="mt-6 lg:mt-8 2xl:mt-12 text-2xl lg:text-4xl 2xl:text-5xl">{{ subtitle }}</h2>
+    {% endif %}
+    {% if description %}
+    <p class="font-sans mt-8 lg:mt-12 2xl:mt-16 text-xl lg:text-2xl 2xl:text-3xl">{{ description }}</p>
+    {% endif %}
+    <p class="font-sans mt-4 lg:mt-6 2xl:mt-8"><strong>{{ page.date | htmlDateString }}</strong><br />
+    <span class="text-base">
+    {% if lastmod %}
+    Last modified {{ lastmod | htmlDateString }}
+    {% else %}
+    &nbsp;
+    {% endif %}
+    </span>
+  </div>
+</div>

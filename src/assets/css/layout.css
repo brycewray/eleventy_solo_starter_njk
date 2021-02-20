@@ -324,7 +324,12 @@ blockquote {
 
 /* start, footnotes */
 
+.footnotes {
+  @apply font-sans;
+}
+
 .footnote-ref {
+  @apply font-sans;
   font-size: 0.65em;
 }
 
@@ -359,7 +364,7 @@ hr {
 }
 
 footer {
-  @apply font-sans bg-gradient-to-t from-transparent dark:from-blue-700;
+  @apply font-sans;
 }
 
 .lazypicturecaption {
