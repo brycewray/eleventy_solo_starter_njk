@@ -1,5 +1,5 @@
 ---
-layout: layouts/posts/singlepostherofit.njk
+layout: layouts/posts/singlepost.njk
 tags: post
 title: "Post 7 with its UNIQUE title"
 subtitle: "The UNIQUE Post 7 subtitle"
