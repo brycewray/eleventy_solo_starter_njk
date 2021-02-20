@@ -73,7 +73,7 @@ CSS-only and **accessible** menu based on... https://codepen.io/jonraedeke/pen/W
    &:checked {
      & ~ nav .nav__items {
        height: auto;
-       @apply bg-blue-700 transition-all duration-500 ease-linear;
+       @apply bg-black dark:bg-blue-700 transition-all duration-500 ease-linear;
        max-height: 30rem;
      }
      & ~ label .nav__icon-line:first-child {
