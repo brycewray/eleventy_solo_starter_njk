@@ -1,3 +1,4 @@
+{% set alpineJSVer = '2.8.2' %}
 {% set fallbackImg = "typewriter-monochrome_2242164_6260x4374.jpg" %}
 {% set eleventyVersion = pkg.devDependencies['@11ty/eleventy'] | replace("^", "") %}
 {% set eleventyEnv = projEnv.environment %}
@@ -53,5 +54,8 @@
     {% else %}
       <link rel="stylesheet" href="/css/index.css" type="text/css" />
     {% endif %}
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v{{ alpineJSVer }}/dist/alpine.min.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v{{ alpineJSVer }}/dist/alpine-ie11.min.js" defer></script>
     
   </head>
