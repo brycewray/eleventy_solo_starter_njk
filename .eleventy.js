@@ -5,7 +5,7 @@ const svgContents = require("eleventy-plugin-svg-contents")
 const Image = require('@11ty/eleventy-img')
 
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(svgContents)
 
