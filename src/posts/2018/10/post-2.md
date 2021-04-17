@@ -26,8 +26,8 @@ And after another paragraph or two or three, you may want to add a subheading, w
 
 Text here.
 
-And here's an example of how to use the `lazypicture` shortcode in `/src/utils/lazy-picture.js`:
+And here's an example of how to use the `image` shortcode (which uses the `eleventy-img` plugin):
 
-{% lazypicture "Early-Web-font-grfx-1-2018-10-16_1218x1296.jpg", "Image from Apple website in 1999 showing graphic elements as text" %}
+{% image "./src/images/Early-Web-font-grfx-1-2018-10-16_1218x1296.jpg", "Image from Apple website in 1999 showing graphic elements as text" %}
 
 Closing text. That ends Post 2!
