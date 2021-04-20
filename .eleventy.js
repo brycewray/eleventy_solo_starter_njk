@@ -46,8 +46,10 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('MMMM d, yyyy')
   })
 
-  // https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
-  eleventyConfig.addLayoutAlias("posts", "src/_includes/layouts/posts/singlepost.njk")
+  // https://www.11ty.dev/docs/layouts/
+  eleventyConfig.addLayoutAlias("base", "layouts/_default/base.njk")
+  eleventyConfig.addLayoutAlias("singlepost", "layouts/posts/singlepost.njk")
+  eleventyConfig.addLayoutAlias("index", "layouts/_default/index.njk")
 
   /* Markdown plugins */
   // https://www.11ty.dev/docs/languages/markdown/

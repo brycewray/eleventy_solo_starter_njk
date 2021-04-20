@@ -1,5 +1,5 @@
 ---
-layout: layouts/posts/singlepost.njk
+layout: singlepost
 title: "The About Me page"
 # Change the title setting for this in /src/_includes/layouts/posts/singlepostherofit.njk
 # to keep the "Other posts" box from appearing at the bottom of this page, since it uses 

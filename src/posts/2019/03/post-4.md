@@ -1,5 +1,5 @@
 ---
-layout: layouts/posts/singlepost.njk
+layout: singlepost
 tags: post
 title: "Post 4 with its UNIQUE title" # Quotation marks allow colons, semicolons, etc.
 subtitle: "The UNIQUE Post 4 subtitle" # Quotation marks allow colons, semicolons, etc.
