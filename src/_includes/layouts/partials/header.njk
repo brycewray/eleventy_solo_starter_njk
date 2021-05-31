@@ -12,8 +12,13 @@
           <li class="nav__item">
             <a href="/about/" title="About">About</a>
           </li>
+          {%- for post in collections.post | reverse -%}
+            {%- if loop.index0 < 1 -%}
+              <li class="nav__item"><a href="{{ post.url }}" title="Latest post">Latest post</a></li>
+            {%- endif -%}
+          {%- endfor -%}
           <li class="nav__item">
-            <a href="/posts/" title="Posts">Posts</a>
+            <a href="/posts/" title="All posts">All posts</a>
           </li>
         </ul>
       </nav>
