@@ -1,5 +1,7 @@
 # Eleventy starter set (Nunjucks-based)
 
+**Note**: Further development suspended as of 2021-09-11.
+
 This is a starter set for the [Eleventy](https://11ty.dev) [static site generator (SSG)](https://staticgen.com). See the [online demo](https://eleventy-solo-starter-njk.vercel.app/). Of course, there are many **far better** ones on the [Eleventy “Starter Projects” page](https://www.11ty.dev/docs/starter/)!
 
 *This starter set uses Nunjucks templating. For a version that uses JavaScript templating (.11ty.js), see the [eleventy_solo_starter repo](https://github.com/brycewray/eleventy_solo_starter).*
